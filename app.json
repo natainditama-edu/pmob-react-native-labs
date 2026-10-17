@@ -4,7 +4,7 @@
     "slug": "pmob-react-native-labs",
     "version": "1.0.0",
     "orientation": "portrait",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "scheme": "com.natatama.pmobreactnativelabs",
     "experiments": {
       "typedRoutes": true
