@@ -18,10 +18,7 @@ config.resolver.resolveRequest = (context, moduleName, platform) => {
   if (context.unstable_logWarning) {
     const originalLogWarning = context.unstable_logWarning;
     context.unstable_logWarning = (message) => {
-      if (
-        typeof message === "string" &&
-        message.includes("Falling back to file-based resolution")
-      ) {
+      if (typeof message === "string" && message.includes("Falling back to file-based resolution")) {
         return;
       }
       return originalLogWarning(message);
