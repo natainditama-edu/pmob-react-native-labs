@@ -1,0 +1,6 @@
+appId: com.natatama.pmobreactnativelabs
+---
+- launchApp
+- tapOn: "Explore.*"
+- tapOn: ".*File-based routing"
+- assertVisible: "This app has two screens.*"

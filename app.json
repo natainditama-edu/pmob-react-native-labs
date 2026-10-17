@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "pmob-react-native-labs",
+    "slug": "pmob-react-native-labs",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "scheme": "com.natatama.pmobreactnativelabs",
+    "experiments": {
+      "typedRoutes": true
+    },
+    "android": {
+      "predictiveBackGestureEnabled": true,
+      "package": "com.natatama.pmobreactnativelabs"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.natatama.pmobreactnativelabs"
+    }
+  }
+}
