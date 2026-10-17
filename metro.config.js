@@ -12,6 +12,17 @@ config.resolver.extraNodeModules = {
   "@": path.resolve(__dirname, "src"),
 };
 
+const defaultResolveRequest = config.resolver.resolveRequest;
+config.resolver.resolveRequest = (context, moduleName, platform) => {
+  if (moduleName.startsWith("@/")) {
+    const targetPath = path.resolve(__dirname, "src", moduleName.slice(2));
+    return context.resolveRequest(context, targetPath, platform);
+  }
+  return defaultResolveRequest
+    ? defaultResolveRequest(context, moduleName, platform)
+    : context.resolveRequest(context, moduleName, platform);
+};
+
 module.exports = withTamagui(config, {
   components: ["@tamagui/core"],
   config: "./tamagui.config.ts",
