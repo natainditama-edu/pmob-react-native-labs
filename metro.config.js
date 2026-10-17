@@ -29,6 +29,7 @@ config.resolver.resolveRequest = (context, moduleName, platform) => {
     const targetPath = path.resolve(__dirname, "src", moduleName.slice(2));
     return context.resolveRequest(context, targetPath, platform);
   }
+
   return defaultResolveRequest
     ? defaultResolveRequest(context, moduleName, platform)
     : context.resolveRequest(context, moduleName, platform);

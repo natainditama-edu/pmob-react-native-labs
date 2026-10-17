@@ -16,6 +16,17 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.natatama.pmobreactnativelabs"
-    }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#FFFFFF",
+          "imageWidth": 200
+        }
+      ]
+    ]
   }
 }
