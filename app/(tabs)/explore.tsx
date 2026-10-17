@@ -1,32 +1,29 @@
-import { StyleSheet, Text } from "react-native";
+import { Text, View } from "@tamagui/core";
+import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { Collapsible } from "@/components/Collapsible";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/accordion";
 
 export default function TabTwoScreen() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>Explore</Text>
-      <Collapsible title="File-based routing">
-        <Text>This app has two screens</Text>
-      </Collapsible>
+    <SafeAreaView style={{ flex: 1, flexGrow: 1, flexShrink: 1 }}>
+      <View flex={1} gap="4" padding="5" backgroundColor="background">
+        <Text fontSize="8" fontWeight="bold" color="color" marginBottom="2">
+          Explore
+        </Text>
+        <Accordion type="single" collapsible width="100%">
+          <AccordionItem value="file-routing">
+            <AccordionTrigger>
+              <Text>File-based routing</Text>
+            </AccordionTrigger>
+            <AccordionContent>
+              <Text fontSize="4" color="color-11">
+                This app has two screens configured with Expo Router and Tamagui primitives.
+              </Text>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </View>
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    gap: 8,
-    width: "80%",
-    height: "80%",
-    marginTop: "20%",
-    marginLeft: "10%",
-  },
-  title: {
-    alignItems: "center",
-    fontSize: 18,
-    fontWeight: "bold",
-    marginBottom: 20,
-  },
-});

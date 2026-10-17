@@ -4,7 +4,7 @@ import { useColorScheme } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
-import { tamaguiConfig } from "@/tamagui.config";
+import { tamaguiConfig } from "../../tamagui.config";
 
 export interface UiProviderProps {
   /**

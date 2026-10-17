@@ -3,7 +3,7 @@ import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import React, { useEffect } from "react";
 
-import { UiProvider } from "../src/providers/ui-provider";
+import { UiProvider } from "@/providers/ui-provider";
 
 SplashScreen.preventAutoHideAsync().catch(() => {
   // Safe no-op on platforms where splash screen auto-hide prevention is unavailable
