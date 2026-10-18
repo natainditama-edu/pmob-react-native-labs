@@ -47,7 +47,7 @@ export default function ExploreScreen() {
       <SafeAreaView edges={["top", "left", "right"]} style={{ flex: 1 }}>
         <ScrollView
           style={{ flex: 1, flexGrow: 1, flexShrink: 1 }}
-          contentContainerStyle={{ padding: 20 }}
+          contentContainerStyle={{ paddingHorizontal: 24, paddingVertical: 48 }}
           showsVerticalScrollIndicator={false}
         >
           <View marginBottom="$4">
