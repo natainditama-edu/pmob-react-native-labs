@@ -21,9 +21,7 @@ export function AccordionTrigger({
       {({ open }: { open: boolean }) => (
         <>
           {children}
-          <Square transparent transition="quick">
-            {open ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
-          </Square>
+          <Square transparent>{open ? <ChevronUp size={24} /> : <ChevronDown size={24} />}</Square>
         </>
       )}
     </TamaguiAccordion.Trigger>
